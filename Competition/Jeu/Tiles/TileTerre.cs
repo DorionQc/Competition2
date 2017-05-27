@@ -16,7 +16,7 @@ namespace Competition.Jeu.Tiles
         {
             get
             {
-                return TextureManager.TextureTerre;
+                return TextureManager.TextureTerre[1];
             }
         }
 
