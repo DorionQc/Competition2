@@ -91,10 +91,16 @@ namespace Competition.Jeu.Tiles
 
         public abstract TileType Type { get; }
 
-        public virtual void Draw(SpriteBatch sb, float width, float height)
+        /// <summary>
+        /// Dessiner les entités sur l'écran
+        /// </summary>
+        /// <param name="sb">SpriteBatch</param>
+        /// <param name="width">The width, in pixels, of a single tile. ScreenWidth / Number of tiles</param>
+        /// <param name="height">The height, in pixels, of a single tile. ScreenHeight / Number of tiles</param>
+        public virtual void Draw(SpriteBatch sb, float widthOfASingleTile, float heightOfASingleTile)
         {
 
-            sb.Draw(Texture, new Rectangle((int)(X * width), (int)(Y * height), (int)width, (int)height), Color.White);
+            sb.Draw(Texture, new Rectangle((int)(X * widthOfASingleTile), (int)(Y * heightOfASingleTile), (int)widthOfASingleTile, (int)heightOfASingleTile), Color.White);
         }
 
         public override string ToString()

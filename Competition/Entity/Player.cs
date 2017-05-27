@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Competition.Entity
 {
-    class Player : Entity
+    public class Player : Entity
     {
         private Weapons[] m_WeaponList;
         public Player(Texture2D[] EntityTextures, Vector2 StartPosition, Vector2 StartSize, Vector2 StartVelocity, Weapons[] pWeapons, double AnimationTimerStart = 0.0,

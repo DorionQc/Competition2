@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Competition.Entity
 {
-    class Entity
+    public class Entity
     {
         private Vector2 m_Position;
         private Vector2 m_Velocity;

@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Competition.Armes
 {
-    abstract class Weapons //Classe abstraite utilisé comme template pour toutes les armes
+    public abstract class Weapons //Classe abstraite utilisé comme template pour toutes les armes
     {
         public abstract void MouseDown(Vector2 MouseDir); //methode utilisé quand un bouton de la sourie est appuyé
         public abstract void MouseUp();//methode utilisé quand un bouton de la sourie est relaché (utilisé pour les armes automatiques)
