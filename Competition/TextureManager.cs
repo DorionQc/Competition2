@@ -13,12 +13,20 @@ namespace Competition
     public static class TextureManager
     {
         public static Texture2D TextureBarricade;
-        public static Texture2D TextureTerre;
+        public static Texture2D[] TextureTerre;
 
         public static void init(ContentManager Content)
         {
+            //Environnement
             TextureBarricade = Content.Load<Texture2D>("Textures/TileBarricade");
-            TextureTerre = Content.Load<Texture2D>("Textures/TileTerre");
+
+            //Arrière-Plan
+            TextureTerre = new Texture2D[2];
+            TextureTerre[0] = Content.Load<Texture2D>("Textures/TileTerre1.png");
+            TextureTerre[1] = Content.Load<Texture2D>("Textures/TileTerre2.png");
+
+            //Personnages
+
         }
     }
 }
