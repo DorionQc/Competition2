@@ -46,7 +46,7 @@ namespace Competition
             Penumbra.AmbientColor = Color.White; //TODO : CHANGE THIS
             Components.Add(Penumbra);
             Screen = Window;
-            CurrentScreen = new ScreenJeu();
+            
 
             base.Initialize();
         }
@@ -61,7 +61,7 @@ namespace Competition
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             TextureManager.init(Content);
-
+            CurrentScreen = new ScreenJeu();
             Penumbra.Initialize();
             Penumbra.Visible = true;
 

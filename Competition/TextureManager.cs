@@ -18,10 +18,11 @@ namespace Competition
         public static void init(ContentManager Content)
         {
             //Environnement
-            TextureBarricade = Content.Load<Texture2D>("Textures/TileBarricade");
+            TextureBarricade = Content.Load<Texture2D>("Textures/TileTerre1");
 
             //Arrière-Plan
             TextureTerre = new Texture2D[2];
+
 
             TextureTerre[0] = Content.Load<Texture2D>("Textures/TileTerre1");
             TextureTerre[1] = Content.Load<Texture2D>("Textures/TileTerre2");
