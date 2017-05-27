@@ -25,7 +25,11 @@
 /processorParam:TextureFormat=Color
 /build:Textures/TileTerre1.png
 
+<<<<<<< HEAD
 #begin Textures/TileTerre2.png
+=======
+#begin Textures/TileTerre1.png
+>>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,9 +39,15 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
+<<<<<<< HEAD
 /build:Textures/TileTerre2.png
 
 #begin Textures/wood.png
+=======
+/build:Textures/TileTerre1.png
+
+#begin Textures/TileTerre2.png
+>>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,5 +57,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
+<<<<<<< HEAD
 /build:Textures/wood.png
+=======
+/build:Textures/TileTerre2.png
+>>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
 

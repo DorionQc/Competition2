@@ -73,3 +73,14 @@ Competition/bin/DesktopGL/AnyCPU/Debug/Competition.exe
 Competition/bin/DesktopGL/AnyCPU/Debug/Competition.pdb
 Competition/obj/Debug/Competition.exe
 Competition/obj/Debug/Competition.pdb
+.vs/Competition/v14/.suo
+Competition/bin/DesktopGL/AnyCPU/Debug/Competition.exe
+Competition/bin/DesktopGL/AnyCPU/Debug/Competition.pdb
+Competition/Competition.csproj
+Competition/Content/Content.mgcb
+Competition/obj/Debug/Competition.csproj.FileListAbsolute.txt
+Competition/obj/Debug/Competition.csprojResolveAssemblyReference.cache
+Competition/obj/Debug/Competition.exe
+Competition/obj/Debug/Competition.pdb
+Competition/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Competition/TextureManager.cs
