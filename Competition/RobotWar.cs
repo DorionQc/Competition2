@@ -2,20 +2,33 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using Penumbra;
+
+using Competition.Jeu;
+using Competition.Jeu.Tiles;
+
 namespace Competition
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class RobotWar : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        IPartieDeJeu CurrentScreen;
+
+        public static PenumbraComponent Penumbra;
+        public static GameWindow Screen;
         
-        public Game1()
+        public RobotWar()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
+            
+
         }
 
         /// <summary>
@@ -28,6 +41,13 @@ namespace Competition
         {
             // TODO: Add your initialization logic here
 
+            //graphics.ToggleFullScreen();
+            Penumbra = new PenumbraComponent(this);
+            Penumbra.AmbientColor = Color.White; //TODO : CHANGE THIS
+            Components.Add(Penumbra);
+            Screen = Window;
+            CurrentScreen = new ScreenJeu();
+
             base.Initialize();
         }
 
@@ -39,6 +59,13 @@ namespace Competition
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            TextureManager.init(Content);
+
+            Penumbra.Initialize();
+            Penumbra.Visible = true;
+
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -62,6 +89,8 @@ namespace Competition
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            CurrentScreen.Update(gameTime);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -73,11 +102,17 @@ namespace Competition
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            Penumbra.BeginDraw();
+            
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            CurrentScreen.Draw(gameTime, spriteBatch);
+            spriteBatch.End();
 
+            // TODO: Add your drawing code here
             base.Draw(gameTime);
+
         }
     }
 }
