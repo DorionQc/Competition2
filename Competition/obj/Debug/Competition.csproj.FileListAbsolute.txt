@@ -15,3 +15,5 @@ F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Frame
 F:\Competition\Competition\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
 F:\Competition\Competition\Competition\obj\Debug\Competition.exe
 F:\Competition\Competition\Competition\obj\Debug\Competition.pdb
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.dll
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
