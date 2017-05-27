@@ -19,10 +19,13 @@ F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penum
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileBarricade.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre.xnb
 <<<<<<< HEAD
+<<<<<<< HEAD
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\screen.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\screenWATH.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\wood.xnb
 =======
+=======
+>>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\obj\Debug\Competition.exe
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\obj\Debug\Competition.pdb
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
@@ -44,4 +47,7 @@ C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.pdb
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
+<<<<<<< HEAD
+>>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
+=======
 >>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337

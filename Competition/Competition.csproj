@@ -127,9 +127,13 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Content Include="Content\Textures\TileTerre.bmp" />
     <Content Include="Content\Textures\TileBarricade.bmp" />
     <Content Include="Content\Textures\wood.png" />
+=======
+    <Content Include="Content\Textures\TileBarricade.bmp" />
+>>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
 =======
     <Content Include="Content\Textures\TileBarricade.bmp" />
 >>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
