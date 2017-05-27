@@ -16,32 +16,3 @@ F:\Competition\Competition\Competition\obj\Debug\Competition.csprojResolveAssemb
 F:\Competition\Competition\Competition\obj\Debug\Competition.exe
 F:\Competition\Competition\Competition\obj\Debug\Competition.pdb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
-<<<<<<< HEAD
-=======
-=======
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.exe
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.pdb
-<<<<<<< HEAD
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.exe
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.pdb
-=======
->>>>>>> 982bc2a7057f81ce4cfb44481e957d89db423ddd
-=======
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.exe
-C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.pdb
->>>>>>> 982bc2a7057f81ce4cfb44481e957d89db423ddd
->>>>>>> origin/master
->>>>>>> 2d6ca4dfe4f48ae6be64316816b1146cd2c67869
