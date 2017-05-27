@@ -18,7 +18,7 @@ namespace Competition.Jeu
 
         public ScreenJeu()
         {
-            _map = new Map(30, 50, RobotWar.Screen.ClientBounds);
+            _map = new Map(20, 20, RobotWar.Screen.ClientBounds);
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)

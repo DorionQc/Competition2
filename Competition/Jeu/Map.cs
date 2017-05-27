@@ -24,9 +24,6 @@ namespace Competition.Jeu
 
         private readonly Random _random;
 
-        // Nombre d'unités contenus dans une case, utilisées par les entités
-        public const int EntityPixelPerCase = 30;
-
         /// <summary>
         /// Tile width, in pixel
         /// </summary>
@@ -180,27 +177,6 @@ namespace Competition.Jeu
         {
             foreach (Tile c in _cases)
                 c.Draw(sb, TileWidth, TileHeight);
-        }
-
-        /// <summary>
-        /// Tries to place a bonus at the specified spot in the map
-        /// </summary>
-        /// <param name="x">X coords of the case to place a bonus in</param>
-        /// <param name="y">Y coords of the case to place a bonus in</param>
-        /// <returns>True if a bonus was place, false otherwise</returns>
-        public bool MakeRandomBonus(int x, int y)
-        {
-            if (x < 0 || y < 0 || x >= _width || y >= _height)
-                return false;
-            if (!(this[x, y] is TileBarricade))
-                return false;
-
-            if (_random.Next() % 3 != 0)
-                return false;
-
-            //this[x, y] = new CaseBonus(x, y, this, _random);
-            return true;
-
         }
     }
 

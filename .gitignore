@@ -89,3 +89,5 @@ Competition/TextureManager.cs
 *.cache
 Competition/obj/Debug/Competition.csproj.FileListAbsolute.txt
 Competition/bin/DesktopGL/AnyCPU/Debug/MonoGame.Penumbra.xml
+Competition/obj/Debug/Competition.exe
+Competition/obj/Debug/Competition.exe
