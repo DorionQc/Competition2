@@ -13,7 +13,7 @@ namespace Competition
 {
     public interface IPartieDeJeu
     {
-        void Draw(GameTime gameTime);
+        void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         void Update(GameTime gameTime);
     }
 }

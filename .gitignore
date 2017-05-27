@@ -65,3 +65,11 @@ Competition/bin/DesktopGL/AnyCPU/Debug/Competition.pdb
 Competition/obj/Debug/Competition.csproj.FileListAbsolute.txt
 Competition/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 packages/MonoGame.Penumbra.DesktopGL.1.3.2/lib/net45/MonoGame.Penumbra.xml
+=======
+Competition/obj/Debug/Competition.pdb
+Competition/obj/Debug/Competition.csproj.FileListAbsolute.txt
+.vs/Competition/v14/.suo
+Competition/Competition.csproj
+Competition/obj/Debug/Competition.csproj.FileListAbsolute.txt
+Competition/obj/Debug/Competition.csprojResolveAssemblyReference.cache
+Competition/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
