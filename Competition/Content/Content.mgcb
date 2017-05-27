@@ -13,21 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Textures/wood.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-<<<<<<< HEAD
-/build:Textures/wood.png
-=======
-/build:Textures/TileBarricade.bmp
-
 #begin Textures/TileTerre1.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -51,8 +36,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/TileTerre2.png
-<<<<<<< HEAD
->>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
-=======
->>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
+
+#begin Textures/wood.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/wood.png
 

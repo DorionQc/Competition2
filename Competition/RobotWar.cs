@@ -108,7 +108,6 @@ namespace Competition
 
             spriteBatch.Begin();
             CurrentScreen.Draw(gameTime, spriteBatch);
-            spriteBatch.Draw(TextureManager.TextureTerre, new Rectangle(10, 10, 400, 400), Color.White);
             spriteBatch.End();
 
             // TODO: Add your drawing code here
