@@ -43,6 +43,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="IPartieDeJeu.cs" />
+    <Compile Include="Jeu\Entity.cs" />
+    <Compile Include="Jeu\Map.cs" />
+    <Compile Include="Jeu\Tiles\IDestructible.cs" />
+    <Compile Include="Jeu\Tiles\Tile.cs" />
+    <Compile Include="Jeu\Tiles\TileArbre.cs" />
+    <Compile Include="Jeu\Tiles\TileBarricade.cs" />
+    <Compile Include="Jeu\Tiles\TileMur.cs" />
+    <Compile Include="Jeu\Tiles\TileTerre.cs" />
     <Compile Include="RobotWar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Intro\" />
-    <Folder Include="Jeu\" />
     <Folder Include="Menu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
