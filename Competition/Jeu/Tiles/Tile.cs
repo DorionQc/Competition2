@@ -9,95 +9,98 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-
+using Penumbra;
 
 namespace Competition.Jeu.Tiles
 {
-    /*
+
+    public enum TileType
+    {
+        Terre,
+        Grass,
+        Roche,
+        Arbre,
+        Barricade
+    }
+
     public abstract class Tile
     {
-        protected int m_x;
-        protected int m_y;
-
-        protected Map m_Map;
-
-        protected bool m_Breakable;
-
-        protected bool m_Breaking;
-        protected bool m_FireGoThrough;
-
-        protected bool m_Solid;
-
-        protected Fire m_FireEntity;
-
-        public AbsCase(int x, int y, Map m, bool Solid, bool Breakable, bool LetsFireThrough)
+        protected Tile(int x, int y, Map m, bool solid, bool breakable, bool letsFireThrough)
         {
-            m_x = x;
-            m_y = y;
-            m_Map = m;
-            m_Solid = Solid;
-            m_Breakable = Breakable;
-            m_Breaking = false;
-            m_FireGoThrough = LetsFireThrough;
-        }
+            X = x;
+            Y = y;
+            Map = m;
+            IsSolid = solid;
+            IsBreakable = breakable;
+            LetsFireThrough = letsFireThrough;
 
-        public int X
-        {
-            get { return m_x; }
-        }
-
-        public int Y
-        {
-            get { return m_y; }
-        }
-
-        public Map Parent
-        {
-            get { return m_Map; }
-        }
-
-        public bool IsBreakable
-        {
-            get { return m_Breakable; }
-        }
-
-        public bool IsBreaking
-        {
-            get { return m_FireEntity != null; }
-        }
-
-        public Fire Fire
-        {
-            get { return m_FireEntity; }
-            set
+            if (solid)
             {
-                m_FireEntity = value;
+                Hull = Hull.CreateRectangle(new Vector2(x * Map.Width + Map.Width / 2, y * Map.Width + Map.Width / 2), new Vector2(Map.Width, Map.Width));
+                RobotWar.Penumbra.Hulls.Add(Hull);
             }
         }
 
-        public bool LetsFireThrough
+        public Hull Hull { get; }
+
+        /// <summary>
+        /// Indice vertical dans le tableau de la carte
+        /// </summary>
+        public int X { get; set; }
+
+        /// <summary>
+        /// Indice vertical dans le tableau de la carte
+        /// </summary>
+        public int Y { get; set; }
+
+        /// <summary>
+        /// La carte qui contient cette case
+        /// </summary>
+        public Map Map { get; set; }
+
+        /// <summary>
+        /// Indique si la case est destructible ou non
+        /// </summary>
+        public bool IsBreakable { get; set; }
+
+        /// <summary>
+        /// Indique si la case est en processus de destruction
+        /// </summary>
+        public bool IsBreaking
         {
-            get { return m_FireGoThrough; }
+            get { /*return Fire != null;*/ return false; }
+            set { throw new System.NotImplementedException(); }
         }
 
-        public virtual bool IsSolid
+        /// <summary>
+        /// Référence vers le feu contenu dans cette case, ou null
+        /// </summary>
+        //public Fire Fire { get; set; }
+
+        /// <summary>
+        /// Indique si le feu peut traverser librement cette case
+        /// </summary>
+        public bool LetsFireThrough { get; set; }
+
+        /// <summary>
+        /// Indique si le joueur peut traverser librement cette case
+        /// </summary>
+        public virtual bool IsSolid { get; set; }
+
+        public abstract Texture2D Texture { get; }
+
+        public abstract TileType Type { get; }
+
+        public virtual void Draw(SpriteBatch sb, float width)
         {
-            get { return m_Solid; }
-        }
 
-        public abstract Image Texture { get; }
-
-        public abstract CaseType Type { get; }
-
-        public virtual void Draw(Graphics g, Rectangle r, SolidBrush b, float Width)
-        {
-            g.DrawImage(Texture, m_x * Width, m_y * Width, Width, Width);
+            sb.Draw(Texture, new Rectangle((int)(X * width), (int)(Y * width), (int)width, (int)width), Color.White);
         }
 
         public override string ToString()
         {
-            return string.Format("{0} at {1}, {2}", Type, m_x, m_y);
+            return $"{Type} at {X}, {Y}";
         }
     }
-    */
+    
 }

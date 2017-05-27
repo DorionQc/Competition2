@@ -8,134 +8,176 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using Competition.Jeu.Tiles;
+
+using Penumbra;
+
 
 namespace Competition.Jeu
 {
-    /*
+    
     public class Map
     {
-        private AbsCase[,] m_tCases;
-        private int m_NoCase;
+        private readonly Tile[,] _cases;
+        private int _width;
+        private int _height;
 
-        private Random m_Random;
+        private readonly Random _random;
 
         // Nombre d'unités contenus dans une case, utilisées par les entités
         public const int EntityPixelPerCase = 30;
 
-        public int NoCase
-        {
-            get { return m_NoCase; }
-        }
+        /// <summary>
+        /// Tile width, in pixel
+        /// </summary>
+        public float TileWidth;
 
-        public Map(int Size)
+        public int Width => _width;
+        public int Height => _height;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="Width">Width, in tile units</param>
+        /// <param name="Height">Height, in tile units</param>
+        /// <param name="clientRect">Window. Assuming this is full screen</param>
+        public Map(int Width, int Height, Rectangle clientRect)
         {
-            m_NoCase = Size + (Size % 2 - 1);
-            m_tCases = new AbsCase[Size, Size];
-            m_Random = new Random();
+            _width = Width;
+            _height = Height;
+            _cases = new Tile[_width, _height];
+            _random = new Random();
+
+            TileWidth = Math.Min((float)clientRect.Width / _width, (float)clientRect.Height / _height);
+
             // Remplissage aléatoire de la carte
-            for (int x = 1; x < Size - 1; x++)
-                for (int y = 1; y < Size - 1; y++)
+            for (int x = 1; x < _width - 1; x++)
+                for (int y = 1; y < _height - 1; y++)
                 {
                     if (x % 2 == 0 && y % 2 == 0)
-                        m_tCases[x, y] = new CaseSolidWall(x, y, this);
-                    else if (m_Random.Next() % 10 != 0)
-                        m_tCases[x, y] = new CaseWall(x, y, this);
+                        this[x, y] = new TileTerre(x, y, this);
+                    else if (_random.Next() % 2 != 0)
+                        this[x, y] = new TileBarricade(x, y, this);
                     else
-                        m_tCases[x, y] = new CaseVide(x, y, this);
+                        this[x, y] = new TileTerre(x, y, this);
                 }
 
-            for (int x = 0; x < Size - 1; x++)
+            for (int x = 0; x < _width - 1; x++)
             {
-                m_tCases[x, 0] = new CaseSolidWall(x, 0, this);
-                m_tCases[Size - 1, x] = new CaseSolidWall(Size - 1, x, this);
-                m_tCases[Size - 1 - x, Size - 1] = new CaseSolidWall(Size - 1 - x, Size - 1, this);
-                m_tCases[0, Size - 1 - x] = new CaseSolidWall(0, Size - 1 - x, this);
+                this[x, 0] = new TileBarricade(x, 0, this);
+                this[_width - 1 - x, _height - 1] = new TileBarricade(_width - 1 - x, _height - 1, this);
+                
+
+            }
+
+            for (int y = 0; y < _height - 1; y++)
+            {
+                this[_width - 1, y] = new TileBarricade(_width - 1, y, this);
+                this[0, _height - 1 - y] = new TileBarricade(0, _height - 1 - y, this);
             }
 
             // Génération des coins
 
             int i = 1;
-            m_tCases[1, 1] = new CaseVide(1, 1, this);
-            m_tCases[1, m_NoCase - 2] = new CaseVide(1, m_NoCase - 2, this);
-            m_tCases[m_NoCase - 2, 1] = new CaseVide(m_NoCase - 2, 1, this);
-            m_tCases[m_NoCase - 2, m_NoCase - 2] = new CaseVide(m_NoCase - 2, m_NoCase - 2, this);
+            this[1, 1] = new TileTerre(1, 1, this);
+            this[1, _height - 2] = new TileTerre(1, _height - 2, this);
+            this[_width - 2, 1] = new TileTerre(_width - 2, 1, this);
+            this[_width - 2, _height - 2] = new TileTerre(_width - 2, _height - 2, this);
             bool tld = true, tlr = true, trd = true, trl = true, blu = true, blr = true, bru = true, brl = true;
             while (i < 4 && (tld || tlr || trd || trl || blu || blr || bru || brl))
             {
                 if (tld)
                 {
-                    m_tCases[1, 1 + i] = new CaseVide(1, 1 + i, this);
-                    if (m_Random.Next() % 7 == 0) tld = false;
+                    this[1, 1 + i] = new TileTerre(1, 1 + i, this);
+                    if (_random.Next() % 7 == 0) tld = false;
                 }
                 if (tlr)
                 {
-                    m_tCases[1 + i, 1] = new CaseVide(1 + i, 1, this);
-                    if (m_Random.Next() % 7 == 0) tlr = false;
+                    this[1 + i, 1] = new TileTerre(1 + i, 1, this);
+                    if (_random.Next() % 7 == 0) tlr = false;
                 }
                 if (trd)
                 {
-                    m_tCases[m_NoCase - 2, 1 + i] = new CaseVide(m_NoCase - 2, 1 + i, this);
-                    if (m_Random.Next() % 7 == 0) trd = false;
+                    this[_width - 2, 1 + i] = new TileTerre(_width - 2, 1 + i, this);
+                    if (_random.Next() % 7 == 0) trd = false;
                 }
                 if (trl)
                 {
-                    m_tCases[m_NoCase - 2 - i, 1] = new CaseVide(m_NoCase - 2 - i, 1, this);
-                    if (m_Random.Next() % 7 == 0) trl = false;
+                    this[_width - 2 - i, 1] = new TileTerre(_width - 2 - i, 1, this);
+                    if (_random.Next() % 7 == 0) trl = false;
                 }
                 if (blu)
                 {
-                    m_tCases[1, m_NoCase - 2 - i] = new CaseVide(1, m_NoCase - 2 - i, this);
-                    if (m_Random.Next() % 7 == 0) blu = false;
+                    this[1, _height - 2 - i] = new TileTerre(1, _height - 2 - i, this);
+                    if (_random.Next() % 7 == 0) blu = false;
                 }
                 if (blr)
                 {
-                    m_tCases[1 + i, m_NoCase - 2] = new CaseVide(1 + i, m_NoCase - 2, this);
-                    if (m_Random.Next() % 7 == 0) blr = false;
+                    this[1 + i, _height - 2] = new TileTerre(1 + i, _height - 2, this);
+                    if (_random.Next() % 7 == 0) blr = false;
                 }
                 if (bru)
                 {
-                    m_tCases[m_NoCase - 2, m_NoCase - 2 - i] = new CaseVide(m_NoCase - 2, m_NoCase - 2 - i, this);
-                    if (m_Random.Next() % 7 == 0) bru = false;
+                    this[_width - 2, _height - 2 - i] = new TileTerre(_width - 2, _height - 2 - i, this);
+                    if (_random.Next() % 7 == 0) bru = false;
                 }
                 if (brl)
                 {
-                    m_tCases[m_NoCase - 2 - i, m_NoCase - 2] = new CaseVide(m_NoCase - 2 - i, m_NoCase - 2, this);
-                    if (m_Random.Next() % 7 == 0) brl = false;
+                    this[_width - 2 - i, _height - 2] = new TileTerre(_width - 2 - i, _height - 2, this);
+                    if (_random.Next() % 7 == 0) brl = false;
                 }
                 i++;
             }
         }
 
         // Indexeur pour aller chercher facilement des cases
-        public AbsCase this[int x, int y]
+        public Tile this[int x, int y]
         {
             get
             {
-                if (x >= 0 && y >= 0 && x < m_NoCase && y < m_NoCase)
-                    return m_tCases[x, y];
-                throw new IndexOutOfRangeException(string.Format("{0}, {1} is outside the range 0-{2}", x, y, m_NoCase - 1));
+                if (x >= 0 && y >= 0 && x < _width && y < _height)
+                    return _cases[x, y];
+                throw new IndexOutOfRangeException($"{x}, {y} is outside the range 0-{_width - 1}, 0-{_height - 1}");
             }
             set
             {
-                if (x >= 0 && y >= 0 && x < m_NoCase && y < m_NoCase)
+                if (x >= 0 && y >= 0 && x < _width && y < _height)
                 {
-                    if (m_tCases[x, y].Fire != null)
-                        m_tCases[x, y].Fire = null;
-                    if (m_tCases[x, y] is CaseVide)
-                        if (((CaseVide)m_tCases[x, y]).ContainsBomb)
-                            ((CaseVide)m_tCases[x, y]).Bomb = null;
-                    m_tCases[x, y] = value;
+                    if (this[x, y] != null)
+                    {
+
+                        if (this[x, y].Hull != null)
+                        {/*
+                            RobotWar.Penumbra.Hulls.Remove(this[x, y].Hull);
+                            if (RobotWar.Joueurs != null)
+                                foreach (Light light in RobotWar.Joueurs[0].Lights)
+                                {
+                                    light.Position += Vector2.One;
+                                    light.Position -= Vector2.One;
+                                }
+                            */
+                        }
+                        /*
+                        if (this[x, y].Fire != null)
+                            this[x, y].Fire = null;
+
+                        TileTerre vide = this[x, y] as TileTerre;
+                        if (vide != null)
+                            if (vide.ContainsBomb)
+                                vide.Bomb = null;
+                                */
+                    }
+
+                    _cases[x, y] = value;
                 }
             }
         }
-        public void Draw(Graphics g, Rectangle r)
+
+
+        public void Draw(SpriteBatch sb, Rectangle clientRect)
         {
-            float w = (float)r.Width / m_NoCase;
-            using (SolidBrush b = new SolidBrush(Color.Black)) // La brosse est passée simplement pour éviter d'avoir à toujours en créer. Sa couleur a peu d'importance
-            {                                                  // et changera à chaque utilisation
-                foreach (AbsCase c in m_tCases)
-                    c.Draw(g, r, b, w);
-            }
+            foreach (Tile c in _cases)
+                c.Draw(sb, TileWidth);
         }
 
         /// <summary>
@@ -146,57 +188,18 @@ namespace Competition.Jeu
         /// <returns>True if a bonus was place, false otherwise</returns>
         public bool MakeRandomBonus(int x, int y)
         {
-            if (x < 0 || y < 0 || x >= m_NoCase || y >= m_NoCase)
+            if (x < 0 || y < 0 || x >= _width || y >= _height)
                 return false;
-            if (!(m_tCases[x, y] is CaseWall))
-                return false;
-
-            if (m_Random.Next() % 3 != 0)
+            if (!(this[x, y] is TileBarricade))
                 return false;
 
-            m_tCases[x, y] = new CaseBonus(x, y, this, m_Random);
+            if (_random.Next() % 3 != 0)
+                return false;
+
+            //this[x, y] = new CaseBonus(x, y, this, _random);
             return true;
 
         }
-
-        // Size, byte[Size, Size]
-        public bool FromByteArray(byte[] Data, ref int Position)
-        {
-            if (Data.Length < Position + 1)
-                return false;
-            m_NoCase = Data[Position++];
-            if (Data.Length < Position + 1 + m_NoCase * m_NoCase)
-                return false;
-            for (int x = 0; x < m_NoCase; x++)
-            {
-                for (int y = 0; y < m_NoCase; y++)
-                {
-                    if (Data[Position] == 2)
-                        m_tCases[x, y] = new CaseSolidWall(x, y, this);
-                    else if (Data[Position] == 1)
-                        m_tCases[x, y] = new CaseWall(x, y, this);
-                    else
-                        m_tCases[x, y] = new CaseVide(x, y, this);
-                    Position++;
-                }
-            }
-            return true;
-        }
-
-        public byte[] ToByteArray()
-        {
-            byte[] ret = new byte[m_NoCase * m_NoCase + 1];
-            ret[0] = (byte)m_NoCase;
-            for (int x = 0; x < m_NoCase; x++)
-            {
-                for (int y = 0; y < m_NoCase; y++)
-                {
-                    ret[1 + x * m_NoCase + y] = (byte)m_tCases[x, y].Type;
-                }
-            }
-            return ret;
-        }
-
     }
-    */
+
 }
