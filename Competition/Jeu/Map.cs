@@ -10,10 +10,12 @@ using Microsoft.Xna.Framework.Input;
 
 using Competition.Jeu.Tiles;
 
+using Penumbra;
+
 
 namespace Competition.Jeu
 {
-    /*
+    
     public class Map
     {
         private readonly Tile[,] _cases;
@@ -44,17 +46,17 @@ namespace Competition.Jeu
                     if (x % 2 == 0 && y % 2 == 0)
                         this[x, y] = new TileTerre(x, y, this);
                     else if (_random.Next() % 2 != 0)
-                        this[x, y] = new TileMur(x, y, this);
+                        this[x, y] = new TileBarricade(x, y, this);
                     else
                         this[x, y] = new TileTerre(x, y, this);
                 }
 
             for (int x = 0; x < size - 1; x++)
             {
-                this[x, 0] = new TileMur(x, 0, this);
-                this[size - 1, x] = new TileMur(size - 1, x, this);
-                this[size - 1 - x, size - 1] = new TileMur(size - 1 - x, size - 1, this);
-                this[0, size - 1 - x] = new TileMur(0, size - 1 - x, this);
+                this[x, 0] = new TileBarricade(x, 0, this);
+                this[size - 1, x] = new TileBarricade(size - 1, x, this);
+                this[size - 1 - x, size - 1] = new TileBarricade(size - 1 - x, size - 1, this);
+                this[0, size - 1 - x] = new TileBarricade(0, size - 1 - x, this);
             }
 
             // Génération des coins
@@ -112,7 +114,7 @@ namespace Competition.Jeu
         }
 
         // Indexeur pour aller chercher facilement des cases
-        public AbsCase this[int x, int y]
+        public Tile this[int x, int y]
         {
             get
             {
@@ -128,15 +130,17 @@ namespace Competition.Jeu
                     {
 
                         if (this[x, y].Hull != null)
-                        {
-                            Game1.Penumbra.Hulls.Remove(this[x, y].Hull);
-                            if (Game1.Joueurs != null)
-                                foreach (Light light in Game1.Joueurs[0].Lights)
+                        {/*
+                            RobotWar.Penumbra.Hulls.Remove(this[x, y].Hull);
+                            if (RobotWar.Joueurs != null)
+                                foreach (Light light in RobotWar.Joueurs[0].Lights)
                                 {
                                     light.Position += Vector2.One;
                                     light.Position -= Vector2.One;
                                 }
+                            */
                         }
+                        /*
                         if (this[x, y].Fire != null)
                             this[x, y].Fire = null;
 
@@ -144,6 +148,7 @@ namespace Competition.Jeu
                         if (vide != null)
                             if (vide.ContainsBomb)
                                 vide.Bomb = null;
+                                */
                     }
 
                     _cases[x, y] = value;
@@ -154,7 +159,7 @@ namespace Competition.Jeu
 
         public void Draw(SpriteBatch sb, Rectangle clientRect)
         {
-            foreach (AbsCase c in _cases)
+            foreach (Tile c in _cases)
                 c.Draw(sb, Width);
         }
 
@@ -168,13 +173,13 @@ namespace Competition.Jeu
         {
             if (x < 0 || y < 0 || x >= _noCase || y >= _noCase)
                 return false;
-            if (!(this[x, y] is TileMur))
+            if (!(this[x, y] is TileBarricade))
                 return false;
 
             if (_random.Next() % 3 != 0)
                 return false;
 
-            this[x, y] = new CaseBonus(x, y, this, _random);
+            //this[x, y] = new CaseBonus(x, y, this, _random);
             return true;
 
         }
@@ -192,9 +197,9 @@ namespace Competition.Jeu
                 for (int y = 0; y < _noCase; y++)
                 {
                     if (data[position] == 2)
-                        this[x, y] = new TileMur(x, y, this);
+                        this[x, y] = new TileBarricade(x, y, this);
                     else if (data[position] == 1)
-                        this[x, y] = new TileMur(x, y, this);
+                        this[x, y] = new TileBarricade(x, y, this);
                     else
                         this[x, y] = new TileTerre(x, y, this);
                     position++;
@@ -217,6 +222,6 @@ namespace Competition.Jeu
             return ret;
         }
 
-    }*/
+    }
 
 }

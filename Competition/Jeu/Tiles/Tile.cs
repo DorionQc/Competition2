@@ -9,13 +9,22 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-
+using Penumbra;
 
 namespace Competition.Jeu.Tiles
 {
 
+    public enum TileType
+    {
+        Terre,
+        Grass,
+        Roche,
+        Arbre,
+        Barricade
+    }
+
     public abstract class Tile
-    {/*
+    {
         protected Tile(int x, int y, Map m, bool solid, bool breakable, bool letsFireThrough)
         {
             X = x;
@@ -28,7 +37,7 @@ namespace Competition.Jeu.Tiles
             if (solid)
             {
                 Hull = Hull.CreateRectangle(new Vector2(x * Map.Width + Map.Width / 2, y * Map.Width + Map.Width / 2), new Vector2(Map.Width, Map.Width));
-                Game1.Penumbra.Hulls.Add(Hull);
+                RobotWar.Penumbra.Hulls.Add(Hull);
             }
         }
 
@@ -59,14 +68,14 @@ namespace Competition.Jeu.Tiles
         /// </summary>
         public bool IsBreaking
         {
-            get { return Fire != null; }
+            get { /*return Fire != null;*/ return false; }
             set { throw new System.NotImplementedException(); }
         }
 
         /// <summary>
         /// Référence vers le feu contenu dans cette case, ou null
         /// </summary>
-        public Fire Fire { get; set; }
+        //public Fire Fire { get; set; }
 
         /// <summary>
         /// Indique si le feu peut traverser librement cette case
@@ -80,7 +89,7 @@ namespace Competition.Jeu.Tiles
 
         public abstract Texture2D Texture { get; }
 
-        public abstract CaseType Type { get; }
+        public abstract TileType Type { get; }
 
         public virtual void Draw(SpriteBatch sb, float width)
         {
