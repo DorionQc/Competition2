@@ -7,31 +7,45 @@ using Microsoft.Xna.Framework;
 
 namespace Competition.Armes
 {
-    interface IArme
+    public abstract class Arme
     {
-        int CapaciteChargeur
+        public Arme(int pCapaciteChargeur, int pQuantiteTotalBalles)//EntityManager pentityManager)
+        {
+            m_CapaciteChargeur = pCapaciteChargeur;
+            m_QuantiteBallesDansChargeur = pCapaciteChargeur;
+            m_QuantiteTotalBalles = pQuantiteTotalBalles;
+            //entityManager = pentityManager;
+        }
+
+        //EntityManager entityManager;
+
+        protected int m_CapaciteChargeur;
+        protected int m_QuantiteBallesDansChargeur;
+        protected int m_QuantiteTotalBalles;
+
+        public abstract int CapaciteChargeur
         {
             get;
             set;
         }
 
-        int QuantiteBallesDansChargeur
+        public abstract int QuantiteBallesDansChargeur
         {
             get;
             set;
         }
 
-        int QuantiteTotaleBalles
+        public abstract int QuantiteTotaleBalles
         {
             get;
             set;
         }
 
-        void Update(GameTime gameTime);
-        void CommenceATirer(GameTime gameTime);
-        void FiniDeTirer(GameTime gameTime);
-
-
+        public abstract void  Update(GameTime gameTime);
+        public abstract void  CommenceATirer(GameTime gameTime);
+        public abstract void  FiniDeTirer(GameTime gameTime);
+        
+        
 
     }
 }
