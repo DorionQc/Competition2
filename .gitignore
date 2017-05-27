@@ -84,3 +84,7 @@ Competition/obj/Debug/Competition.exe
 Competition/obj/Debug/Competition.pdb
 Competition/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Competition/TextureManager.cs
+*.exe
+*.pdb
+*.cache
+Competition/obj/Debug/Competition.csproj.FileListAbsolute.txt

@@ -42,7 +42,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Armes\IArme.cs" />
+    <Compile Include="Armes\OldArme.cs" />
+    <Compile Include="Armes\Pistolet.cs" />
+    <Compile Include="Armes\Weapon.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Entity\Player.cs" />
     <Compile Include="IPartieDeJeu.cs" />
     <Compile Include="Jeu\Entity.cs" />
     <Compile Include="Jeu\Map.cs" />

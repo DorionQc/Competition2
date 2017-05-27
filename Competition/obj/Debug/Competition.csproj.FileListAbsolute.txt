@@ -1,7 +1,31 @@
+<<<<<<< HEAD
 F:\Competition\Competition\Competition\obj\Debug\Competition.exe
 F:\Competition\Competition\Competition\obj\Debug\Competition.pdb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\screen.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\screenWATH.xnb
+=======
+<<<<<<< HEAD
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.exe
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.pdb
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.dll
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.exe
+C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.pdb
+=======
+>>>>>>> 77715c701214929503dd5efd593b2b3cbb0ee63b
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
@@ -46,4 +70,8 @@ C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.pdb
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
+<<<<<<< HEAD
 >>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
+=======
+>>>>>>> origin/master
+>>>>>>> 77715c701214929503dd5efd593b2b3cbb0ee63b
