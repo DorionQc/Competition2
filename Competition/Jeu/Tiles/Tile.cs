@@ -91,7 +91,7 @@ namespace Competition.Jeu.Tiles
         public override string ToString()
         {
             return $"{Type} at {X}, {Y}";
-        }
+        }*/
     }
-    */
+    
 }
