@@ -26,7 +26,7 @@ namespace Competition
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            Screen = Window;
+            
             
 
         }
@@ -43,9 +43,9 @@ namespace Competition
 
             //graphics.ToggleFullScreen();
             Penumbra = new PenumbraComponent(this);
-            Penumbra.AmbientColor = Color.Teal; //TODO : CHANGE THIS
+            Penumbra.AmbientColor = Color.White; //TODO : CHANGE THIS
             Components.Add(Penumbra);
-
+            Screen = Window;
             CurrentScreen = new ScreenJeu();
 
             base.Initialize();
@@ -64,6 +64,8 @@ namespace Competition
 
             Penumbra.Initialize();
             Penumbra.Visible = true;
+
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -101,15 +103,17 @@ namespace Competition
         protected override void Draw(GameTime gameTime)
         {
             Penumbra.BeginDraw();
+            
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
             CurrentScreen.Draw(gameTime, spriteBatch);
+            spriteBatch.Draw(TextureManager.TextureTerre, new Rectangle(10, 10, 400, 400), Color.White);
             spriteBatch.End();
 
             // TODO: Add your drawing code here
-
             base.Draw(gameTime);
+
         }
     }
 }

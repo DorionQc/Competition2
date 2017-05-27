@@ -91,10 +91,10 @@ namespace Competition.Jeu.Tiles
 
         public abstract TileType Type { get; }
 
-        public virtual void Draw(SpriteBatch sb, float width)
+        public virtual void Draw(SpriteBatch sb, float width, float height)
         {
 
-            sb.Draw(Texture, new Rectangle((int)(X * width), (int)(Y * width), (int)width, (int)width), Color.White);
+            sb.Draw(Texture, new Rectangle((int)(X * width), (int)(Y * height), (int)width, (int)height), Color.White);
         }
 
         public override string ToString()

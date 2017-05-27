@@ -31,6 +31,7 @@ namespace Competition.Jeu
         /// Tile width, in pixel
         /// </summary>
         public float TileWidth;
+        public float TileHeight;
 
         public int Width => _width;
         public int Height => _height;
@@ -48,7 +49,8 @@ namespace Competition.Jeu
             _cases = new Tile[_width, _height];
             _random = new Random();
 
-            TileWidth = Math.Min((float)clientRect.Width / _width, (float)clientRect.Height / _height);
+            TileWidth = (float)clientRect.Width / _width;
+            TileHeight = (float)clientRect.Height / _height;
 
             // Remplissage aléatoire de la carte
             for (int x = 1; x < _width - 1; x++)
@@ -177,7 +179,7 @@ namespace Competition.Jeu
         public void Draw(SpriteBatch sb, Rectangle clientRect)
         {
             foreach (Tile c in _cases)
-                c.Draw(sb, TileWidth);
+                c.Draw(sb, TileWidth, TileHeight);
         }
 
         /// <summary>
