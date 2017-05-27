@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="IPartieDeJeu.cs" />
     <Compile Include="Jeu\Entity.cs" />
+    <Compile Include="Jeu\EventArgs\BlockCollisionEventArgs.cs" />
+    <Compile Include="Jeu\EventArgs\MultiTileEventArgs.cs" />
+    <Compile Include="Jeu\EventArgs\TileEventArgs.cs" />
     <Compile Include="Jeu\Map.cs" />
     <Compile Include="Jeu\Tiles\IDestructible.cs" />
     <Compile Include="Jeu\Tiles\Tile.cs" />
