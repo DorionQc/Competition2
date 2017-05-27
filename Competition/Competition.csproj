@@ -42,6 +42,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Armes\IArme.cs" />
     <Compile Include="IPartieDeJeu.cs" />
     <Compile Include="Jeu\Entity.cs" />
     <Compile Include="Jeu\EventArgs\BlockCollisionEventArgs.cs" />
@@ -51,16 +52,20 @@
     <Compile Include="Jeu\Tiles\IDestructible.cs" />
     <Compile Include="Jeu\Tiles\Tile.cs" />
     <Compile Include="Jeu\Tiles\TileArbre.cs" />
-    <Compile Include="Jeu\Tiles\TileBarricade.cs" />
     <Compile Include="Jeu\Tiles\TileMur.cs" />
     <Compile Include="Jeu\Tiles\TileTerre.cs" />
     <Compile Include="RobotWar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextureManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Penumbra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Penumbra.DesktopGL.1.3.2\lib\net45\MonoGame.Penumbra.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -116,6 +121,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Intro\" />
