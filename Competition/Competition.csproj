@@ -130,13 +130,6 @@
     <Folder Include="Menu\" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="Content\Textures\TileTerre1.png" />
-    <Content Include="Content\Textures\TileTerre2.png" />
-    <Content Include="Content\Textures\wood.png" />
-=======
-    <Content Include="Content\Textures\TileBarricade.bmp" />
->>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

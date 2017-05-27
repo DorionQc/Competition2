@@ -4,7 +4,6 @@ F:\Competition\Competition\Competition\obj\Debug\Competition.pdb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\screen.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\screenWATH.xnb
 =======
-<<<<<<< HEAD
 C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
 C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
 C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
@@ -24,7 +23,6 @@ C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopG
 C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
 C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.exe
 C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\obj\Debug\Competition.pdb
-=======
 >>>>>>> 77715c701214929503dd5efd593b2b3cbb0ee63b
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
@@ -44,9 +42,7 @@ F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.ex
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.pdb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
-<<<<<<< HEAD
 F:\Competition\Competition\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
-=======
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileBarricade.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre.xnb
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\obj\Debug\Competition.exe
@@ -70,8 +66,5 @@ C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Competition.pdb
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
 C:\Users\Patrick\Desktop\Fred\Competition\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
-<<<<<<< HEAD
 >>>>>>> 14d1bb2bfb60a74b14c1d0aae9048b85f3265337
-=======
 >>>>>>> origin/master
->>>>>>> 77715c701214929503dd5efd593b2b3cbb0ee63b
