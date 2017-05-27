@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Input;
 
 using Penumbra;
 
+using Competition.Jeu;
+using Competition.Jeu.Tiles;
+
 namespace Competition
 {
     /// <summary>
@@ -14,13 +17,17 @@ namespace Competition
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        IPartieDeJeu CurrentScreen;
+
         public static PenumbraComponent Penumbra;
+        public static GameWindow Screen;
         
         public RobotWar()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
+            Screen = Window;
+            
 
         }
 
@@ -39,6 +46,8 @@ namespace Competition
             Penumbra.AmbientColor = Color.Teal; //TODO : CHANGE THIS
             Components.Add(Penumbra);
 
+            CurrentScreen = new ScreenJeu();
+
             base.Initialize();
         }
 
@@ -50,6 +59,8 @@ namespace Competition
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            TextureManager.init(Content);
 
             Penumbra.Initialize();
             Penumbra.Visible = true;
@@ -76,6 +87,8 @@ namespace Competition
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            CurrentScreen.Update(gameTime);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -89,7 +102,9 @@ namespace Competition
         {
             Penumbra.BeginDraw();
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
             spriteBatch.Begin();
+            CurrentScreen.Draw(gameTime, spriteBatch);
             spriteBatch.End();
 
             // TODO: Add your drawing code here

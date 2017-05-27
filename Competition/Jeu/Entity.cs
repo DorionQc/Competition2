@@ -15,14 +15,33 @@ using Competition.Jeu.EventArgs;
 
 namespace Competition.Jeu
 {
+    [Flags]
+    public enum CollisionSide
+    {
+        None = 0,
+        Up = 1,
+        Left = 2,
+        Down = 4,
+        Right = 8
+    };
 
-    //    public delegate void OnDropBombHandler(object sender, TileEventArgs e);
-    public delegate void OnMoveHandler(object sender);
+    public struct CollisionInfo
+    {
+        public CollisionSide Side;
+        public Tile Tile;
+
+        public CollisionInfo(CollisionSide side, Tile tile)
+        {
+            this.Side = side;
+            this.Tile = tile;
+        }
+    }
+
+//    public delegate void OnDropBombHandler(object sender, TileEventArgs e);
     public delegate void OnGetDropHandler(object sender, TileEventArgs e);
     public delegate void OnChangeTileHandler(object sender, MultiTileEventArgs e);
     public delegate void OnCollideWithBlockHandler(object sender, BlockCollisionEventArgs e);
-    public delegate void OnBombExplodeHandler(object sender, TileEventArgs e);
-    public delegate void OnDieHandler(object sender);
+//    public delegate void OnBombExplodeHandler(object sender, TileEventArgs e);
 
     public delegate void OnGenericMultiblockEventHandler(object sender, MultiTileEventArgs e);
     public delegate void OnGenericBlockEventHandler(object sender, TileEventArgs e);
@@ -31,26 +50,23 @@ namespace Competition.Jeu
     {
         Joueur = 0,
         Bomb,
-        Feu,
-        Projectile,
-        Robot
+        
     };
 
     public abstract class Entity
     {
         private int _x;
         private int _y;
-        public const int Size = 10;
 
         /// <summary>
         /// Lancé lorsque l'entité meurt
         /// </summary>
-        public event OnDieHandler Died;
+//        public event OnDieHandler Died;
 
-        protected void FireDied(object sender)
-        {
-            Died?.Invoke(sender);
-        }
+  //      protected void FireDied(object sender, CancellableEventArgs e)
+  //      {
+  //          Died?.Invoke(sender, e);
+  //      }
 
         protected Entity(int x, int y, Map m, bool registered, int id)
         {
@@ -58,6 +74,7 @@ namespace Competition.Jeu
             _x = x;
             _y = y;
             Map = m;
+            Size = 15;
             IsDead = false;
             ID = id == 0 ? (int)DateTime.Now.Ticks ^ (x << 16) ^ y : id;
         }
@@ -89,6 +106,11 @@ namespace Competition.Jeu
             get { return _y; }
             set { if (value >= 0 && value < Map.NoTile * Map.EntityPixelPerTile) _y = value; }
         }
+
+        /// <summary>
+        /// Grosseur de l'entité
+        /// </summary>
+        public int Size { get; set; }
 
         /// <summary>
         /// Carte contenant l'entité

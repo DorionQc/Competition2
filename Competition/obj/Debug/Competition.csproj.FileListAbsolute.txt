@@ -42,3 +42,6 @@ C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopG
 >>>>>>> origin/master
 >>>>>>> master
 C:\Users\GÉRÉMY\Documents\GitHub\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileBarricade.xnb
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre.xnb
+>>>>>>> parent of 09378ec... Some more stuff, I would like the map.
