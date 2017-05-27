@@ -16,6 +16,7 @@ F:\Competition\Competition\Competition\obj\Debug\Competition.csprojResolveAssemb
 F:\Competition\Competition\Competition\obj\Debug\Competition.exe
 F:\Competition\Competition\Competition\obj\Debug\Competition.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\GÉRÉMY\Documents\GitHub\Competition2\Competition\obj\Debug\Competition.exe
 C:\Users\GÉRÉMY\Documents\GitHub\Competition2\Competition\obj\Debug\Competition.pdb
 =======
@@ -42,6 +43,14 @@ C:\Users\Charles-Isaac\Desktop\Competition\Competition2\Competition\bin\DesktopG
 >>>>>>> origin/master
 >>>>>>> master
 C:\Users\GÉRÉMY\Documents\GitHub\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileBarricade.xnb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre.xnb
 >>>>>>> parent of 09378ec... Some more stuff, I would like the map.
+=======
+=======
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileBarricade.xnb
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre.xnb
+>>>>>>> master
+>>>>>>> d69ca2192e7c50cc61cc9ff6c19752b9bc20a8d1

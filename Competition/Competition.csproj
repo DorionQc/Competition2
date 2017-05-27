@@ -49,11 +49,19 @@
     <Compile Include="Jeu\EventArgs\MultiTileEventArgs.cs" />
     <Compile Include="Jeu\EventArgs\TileEventArgs.cs" />
     <Compile Include="Jeu\Map.cs" />
+<<<<<<< HEAD
 
     <Compile Include="Jeu\MoveableEntity.cs" />
 
     <Compile Include="Jeu\ScreenJeu.cs" />
 
+=======
+<<<<<<< HEAD
+    <Compile Include="Jeu\MoveableEntity.cs" />
+=======
+    <Compile Include="Jeu\ScreenJeu.cs" />
+>>>>>>> master
+>>>>>>> d69ca2192e7c50cc61cc9ff6c19752b9bc20a8d1
     <Compile Include="Jeu\Tiles\IDestructible.cs" />
     <Compile Include="Jeu\Tiles\Tile.cs" />
     <Compile Include="Jeu\Tiles\TileArbre.cs" />
