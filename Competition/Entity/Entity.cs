@@ -78,6 +78,7 @@ namespace Competition.Entity
             get { return m_EntityTextures; }
             set { m_EntityTextures = value; }
         }
+        
 
         public bool AnimationLoop
         {
@@ -107,6 +108,13 @@ namespace Competition.Entity
         {
             get { return m_AnimationTimerDuration; }
             set { m_AnimationTimerDuration = value; }
+        }
+
+        public void Draw(SpriteBatch sb, Rectangle clientRect)
+        {
+            sb.Draw(CurrentTexture(),new Rectangle((int)m_Position.X, (int)m_Position.Y, (int)m_Size.X, (int)m_Size.Y), Color.DeepPink);
+
+            
         }
     }
 }

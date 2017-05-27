@@ -17,3 +17,5 @@ C:\Users\Charles-Isaac\Desktop\Competition2\Competition\bin\DesktopGL\AnyCPU\Deb
 C:\Users\Charles-Isaac\Desktop\Competition2\Competition\obj\Debug\Competition.csprojResolveAssemblyReference.cache
 C:\Users\Charles-Isaac\Desktop\Competition2\Competition\obj\Debug\Competition.exe
 C:\Users\Charles-Isaac\Desktop\Competition2\Competition\obj\Debug\Competition.pdb
+C:\Users\Charles-Isaac\Desktop\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre2.xnb
+C:\Users\Charles-Isaac\Desktop\Competition2\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\wood.xnb
