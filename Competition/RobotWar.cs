@@ -20,12 +20,14 @@ namespace Competition
         IPartieDeJeu CurrentScreen;
 
         public static PenumbraComponent Penumbra;
+        public static GameWindow Screen;
         
         public RobotWar()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
+            Screen = Window;
+            
 
         }
 
@@ -100,6 +102,7 @@ namespace Competition
         {
             Penumbra.BeginDraw();
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
             spriteBatch.Begin();
             CurrentScreen.Draw(gameTime, spriteBatch);
             spriteBatch.End();

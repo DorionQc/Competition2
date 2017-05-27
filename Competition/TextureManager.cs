@@ -17,7 +17,8 @@ namespace Competition
 
         public static void init(ContentManager Content)
         {
-            //TODO : LOAD ALL TEXTURES
+            TextureBarricade = Content.Load<Texture2D>("Textures/TileBarricade");
+            TextureTerre = Content.Load<Texture2D>("Textures/TileTerre");
         }
     }
 }

@@ -16,3 +16,5 @@ F:\Competition\Competition\Competition\obj\Debug\Competition.csprojResolveAssemb
 F:\Competition\Competition\Competition\obj\Debug\Competition.exe
 F:\Competition\Competition\Competition\obj\Debug\Competition.pdb
 F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\MonoGame.Penumbra.xml
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileBarricade.xnb
+F:\Competition\Competition\Competition\bin\DesktopGL\AnyCPU\Debug\Content\Textures\TileTerre.xnb
