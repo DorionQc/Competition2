@@ -48,7 +48,6 @@
     <Compile Include="Entity\Entity.cs" />
     <Compile Include="Entity\Player.cs" />
     <Compile Include="IPartieDeJeu.cs" />
-    <Compile Include="Jeu\Entity.cs" />
     <Compile Include="Jeu\Map.cs" />
     <Compile Include="Jeu\ScreenJeu.cs" />
     <Compile Include="Jeu\Tiles\IDestructible.cs" />

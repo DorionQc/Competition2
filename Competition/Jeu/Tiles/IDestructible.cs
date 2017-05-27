@@ -17,7 +17,7 @@ namespace Competition.Jeu.Tiles
     public interface IDestructible
     {
         int PointDeVie { get; set; }
-        int Damage(Entity Source, int Degats, Vector2 Velocite);
-        int Damage(Entity Source, int Degats, Vector2 Velocite, Entity Bullet);
+        int Damage(Entity.Entity Source, int Degats, Vector2 Velocite);
+        int Damage(Entity.Entity Source, int Degats, Vector2 Velocite, Entity.Entity Bullet);
     }
 }
